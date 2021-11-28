@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/feather.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <a href="">MMS IT</a>
+        </div>
+        <button class="mobile-menu-btn">
+            <i class="feather-list"></i>
+        </button>
+        <nav class="nav show-nav">
+            <ul class="nav-list">
+                <li>
+                    <a class="nav-item" href="">Home</a>
+                </li>
+                <li>
+                    <a class="nav-item" href="">About</a>
+                </li>
+                <li>
+                    <a class="nav-item" href="">Services</a>
+                </li>
+                <li>
+                    <a class="nav-item" href="">Gallary</a>
+                </li>
+                <li>
+                    <a class="nav-item" href="">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        let nav = document.querySelector("nav");
+        let btn = document.querySelector(".mobile-menu-btn");
+        let button = document.querySelector("button");
+
+        btn.addEventListener("click", _ => nav.classList.toggle("show-nav"));
+
+        btn.addEventListener("click",_ => console.log('work'))
+    </script>
+</body>
+</html>

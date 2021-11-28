@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: #274046;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1100px;
+    margin: 10px auto;
+    background-color: #b0dab9;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    transition: .3s;
+}
+header:hover{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+.brand a{
+    text-decoration: none;
+    color: #8da6db;
+    font-size: 40px;
+    font-weight: bolder;
+}
+.mobile-menu-btn{
+    display: none;
+    text-decoration: none;
+    background-color: #556270;
+    width: 45px;
+    border: none;
+    padding: 5px 5px;
+    text-align: center;
+    border-radius: 5px;
+    color: #8da6db;
+    font-size: 20px;
+}  
+.mobile-menu-btn:focus-visible{
+    outline: none;
+}
+.nav-list{
+    padding: 0px;
+}
+.nav-list li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0px 5px;
+}
+.nav-list li:hover{
+    transform: scale(1.15);
+}
+.nav-item{
+    text-decoration: none;
+    background-color: #556270;
+    width: 120px;
+    padding: 10px 15px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    color: #8da6db;
+}
+@media screen and (max-width:480px) {
+    header{
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: 0px;
+        border-radius: 0px;
+    }
+    .nav{
+        display: none;
+        width: 100%;
+        animation: slowDrop .5s ;
+    }
+    .mobile-menu-btn{
+        display: inline-block;
+    }
+    .nav-list li{
+        display: block;
+    }
+    .nav-list li:hover{
+        transform: none;
+    }
+    .show-nav{
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top: 80px;
+        left: 0px;
+        background: #33545c;
+        padding: 10px;
+        border-radius: 10px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    }
+    .nav-item{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .nav-list:first-child{
+        margin-bottom: 5px;
+    }
+}
+
+@keyframes slowDrop {
+    0%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
